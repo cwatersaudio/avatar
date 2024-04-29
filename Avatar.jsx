@@ -48,7 +48,7 @@ export default function Avatar(props) {
     return (
         <div className={avatarClass}>
             {imgSrc && <img src={imgSrc} alt="Avatar" className="" />}
-            {props.children}
+            {!imgSrc && props.children}
             {!imgSrc && !props.children && <IoPersonSharp />}
         </div>
     )
